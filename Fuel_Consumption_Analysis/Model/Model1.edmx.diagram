@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ae07ed91a85c4ba2a8cbf15d93fdc014" Name="Diagram1">
+        <EntityTypeShape EntityType="Fuel_Consumption_AnalysisModel.CarMarks" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Fuel_Consumption_AnalysisModel.CarModels" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Fuel_Consumption_AnalysisModel.Cars" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Fuel_Consumption_AnalysisModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="Fuel_Consumption_AnalysisModel.FK_CarModels_CarMarks" ManuallyRouted="false" />
+        <AssociationConnector Association="Fuel_Consumption_AnalysisModel.FK_Cars_CarMarks" ManuallyRouted="false" />
+        <AssociationConnector Association="Fuel_Consumption_AnalysisModel.FK_Cars_CarModels" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

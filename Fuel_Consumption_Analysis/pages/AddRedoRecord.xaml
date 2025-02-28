@@ -1,0 +1,65 @@
+﻿<Page x:Class="Fuel_Consumption_Analysis.pages.AddRedoRecord"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Fuel_Consumption_Analysis.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="AddRedoRecord">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="3" Height="413" Stroke="Black" Grid.Row="0" VerticalAlignment="Top" Margin="52,10,52,0" Grid.RowSpan="7" Grid.ColumnSpan="5" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="Black" Direction="180" ShadowDepth="8" Opacity="1"  BlurRadius="15"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <TextBlock  Grid.Column="4" Margin="49,5,49,0" Grid.Row="0" TextWrapping="Wrap" Text="Расчет" VerticalAlignment="Top" Grid.ColumnSpan="3" Grid.RowSpan="2" FontSize="26" HorizontalAlignment="Center" TextDecorations="Underline"/>
+        <TextBlock  Grid.Column="3" HorizontalAlignment="Left" Margin="74,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Марка" VerticalAlignment="Top" FontSize="22" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <ComboBox x:Name="cmbMark" HorizontalAlignment="Left" Margin="74,30,0,0"  VerticalAlignment="Top"  Grid.Column="3"  Grid.Row="1" FontSize="18" Width="280" Grid.ColumnSpan="5" BorderThickness="0,0,0,2" SelectionChanged="cmbMark_SelectionChanged"/>
+
+        <TextBlock  Grid.Column="3" HorizontalAlignment="Left" Margin="74,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Модель" VerticalAlignment="Top" FontSize="22" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmbModel" HorizontalAlignment="Left" Margin="74,30,0,0" VerticalAlignment="Top"  Grid.Column="3"  Grid.Row="2" FontSize="18" Width="280" Grid.ColumnSpan="5" BorderThickness="0,0,0,2"/>
+
+        <TextBlock  Grid.Column="3" HorizontalAlignment="Left" Margin="74,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Дистанция,км" VerticalAlignment="Top" FontSize="22" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txtDistance" HorizontalAlignment="Left" Margin="74,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  Grid.Column="3"  Grid.Row="3" FontSize="18" Width="280" Grid.ColumnSpan="5" BorderThickness="0,0,0,2"/>
+
+        <TextBlock  Grid.Column="3" HorizontalAlignment="Left" Margin="74,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Расход л,100км" VerticalAlignment="Top" FontSize="22" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txtConsumption" HorizontalAlignment="Left" Margin="74,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  Grid.Column="3"  Grid.Row="4" FontSize="18" Width="280" Grid.ColumnSpan="5" BorderThickness="0,0,0,2"/>
+
+        <TextBlock  Grid.Column="3" HorizontalAlignment="Left" Margin="74,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" FontSize="22" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txtResult" IsReadOnly="True" HorizontalAlignment="Left" Margin="74,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  Grid.Column="3"  Grid.Row="5" FontSize="18" Width="280" Grid.ColumnSpan="5" BorderThickness="0,0,0,2"/>
+
+        <Button x:Name="btnCalculate" Grid.Column="4"  Height="35" Content="Рассчитать" Margin="20,0,20,45" Grid.Row="6" Background="#534b4f" BorderBrush="{x:Null}" Foreground="White" Grid.ColumnSpan="3" FontSize="20" Click="btnCalculate_Click" Cursor="Hand" IsDefault="True">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Direction="180" ShadowDepth="8" Opacity="0.5"  BlurRadius="15"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Page>
